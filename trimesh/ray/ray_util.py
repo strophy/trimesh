@@ -58,6 +58,7 @@ def contains_points(
     _location, index_ray, _c = intersector.intersects_location(
         np.vstack((points[inside_aabb], points[inside_aabb])),
         np.vstack((ray_directions, -ray_directions)),
+        multiple_hits=True,
     )
 
     # if we hit nothing in either direction just return with no hits
