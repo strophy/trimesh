@@ -119,8 +119,8 @@ def test_contains_cavity():
 
     mesh = g.trimesh.boolean.difference(
         [
-            g.trimesh.creation.box(extents=(1, 1, 1)),
-            g.trimesh.creation.box(extents=(0.1, 0.1, 0.1)),
+            g.trimesh.creation.box(extents=[1, 1, 1]),
+            g.trimesh.creation.box(extents=[0.1, 0.1, 0.1]),
         ]
     )
     engines = [ray_mod.ray_triangle.RayMeshIntersector]
